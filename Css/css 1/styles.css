@@ -1,0 +1,29 @@
+/* Header styles */
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+/* Paragraph styles */
+p {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+/* Style for secondary buttons */
+.secondary-button {
+  background-color: #28a745;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+/* Style for event cards */
+.event-card {
+  background-color: #fff;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}

@@ -1,0 +1,91 @@
+/* Reset universal selector */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body font and layout */
+body {
+  font-family: 'Roboto', sans-serif;
+  padding: 20px;
+}
+
+/* Header Banner Styling */
+#mainHeader {
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+  color: white;
+  padding: 15px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Event card styling */
+.eventCard {
+  border: 2px solid #ccc;
+  padding: 15px;
+  margin-bottom: 15px;
+  background-color: #fff;
+  outline: none;
+}
+
+/* Group selectors */
+h3, p {
+  color: #333;
+}
+
+/* Link styling */
+a:link {
+  color: #007BFF;
+}
+
+a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+a:visited {
+  color: #800080;
+}
+
+/* Table styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* News section: Multi-column layout */
+.news {
+  column-count: 2;
+  column-gap: 30px;
+  column-rule: 1px solid gray;
+  margin: 20px 0;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  table, thead, tbody, th, td, tr {
+    font-size: 14px;
+  }
+
+  .news {
+    column-count: 1;
+  }
+}
