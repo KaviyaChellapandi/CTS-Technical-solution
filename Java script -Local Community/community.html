@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Community Events Portal</title>
+    <style>
+        header {
+    background-color: #333;
+    padding: 1rem;
+    color: white;
+    text-align: center;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+        #welcomeBanner {
+            background-color: #4f8ef7;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .highlight {
+            color: yellow;
+            font-weight: bold;
+        }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin: 20px;
+        }
+        .gallery-grid img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        .gallery-grid img:hover {
+            transform: scale(1.05);
+        }
+        form {
+            margin: 20px;
+        }
+        video {
+            width: 100%;
+            max-width: 600px;
+            margin: 20px auto;
+            display: block;
+        }
+        button {
+            padding: 8px 16px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Community Events</h1>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#events">Events</a>
+        <a href="#contact">Contact</a>
+        <a href="help.html" target="_blank">Help</a>
+    </nav>
+</header>
+
+
+<div id="welcomeBanner">
+    Welcome back, <span class="highlight">Logged-in User!</span> 
+    <span style="color: red; font-weight: bold;">Special Offer Today!</span>
+</div>
+
+<section id="events">
+    <h2>Community Event Gallery</h2>
+    <div class="gallery-grid">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3lgTtmAjLmMoLgMOhIQH6OA_fID6e636CYg&s" alt="Event 1" title="Event 1" ondblclick="enlargeImage(this)">
+        <img src="data:image/jpeg;base64,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" alt="Event 2" title="Event 2">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKrJ7Bk9PBE10GT6ssRUtBmy45MkfU3lrccQ&s" alt="Event 3" title="Event 3">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3lgTtmAjLmMoLgMOhIQH6OA_fID6e636CYg&s" alt="Event 4" title="Event 4">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsdsgpXklJc_b59EYTudwRfcW4KrLXUWqhZg&s" alt="Event 5" title="Event 5">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCdFkafE-dRtaONCa-1ew-KlhoY2PlyjutQw&s" alt="Event 6" title="Event 6">
+    </div>
+</section>
+
+<section id="registration">
+    <h2>Register for an Event</h2>
+    <form onsubmit="confirmRegistration(event)">
+        <input type="text" placeholder="Your Name" required autofocus><br>
+        <input type="email" placeholder="Your Email" required><br>
+        <input type="date" required><br>
+        <select onchange="updateFee()" id="eventType">
+            <option value="">Select Event</option>
+            <option value="Free">Community Meetup (Free)</option>
+            <option value="$20">Workshop ($20)</option>
+        </select><br>
+        <input type="text" id="phone" placeholder="Phone Number" onblur="validatePhone()"><br>
+        <textarea placeholder="Your message"></textarea><br>
+        <output id="confirmation"></output><br>
+        <button type="submit">Register</button>
+    </form>
+</section>
+
+<section id="video">
+    <h2>Event Video</h2>
+    <video controls oncanplay="videoReady()">
+        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+</section>
+
+<section id="map">
+    <h2>Find Nearby Events</h2>
+    <button onclick="findNearbyEvents()">Find Nearby Events</button>
+    <p id="location"></p>
+</section>
+
+<script>
+    function enlargeImage(img) {
+        img.style.transform = "scale(1.2)";
+        setTimeout(() => img.style.transform = "scale(1)", 500);
+    }
+
+    function confirmRegistration(event) {
+        event.preventDefault();
+        document.getElementById("confirmation").value = "Registration successful!";
+    }
+
+    function updateFee() {
+        const fee = document.getElementById("eventType").value;
+        alert("Selected Event Fee: " + fee);
+    }
+
+    function validatePhone() {
+        const phone = document.getElementById("phone").value;
+        if (phone.length < 10) {
+            alert("Phone number must be at least 10 digits.");
+        }
+    }
+
+    function videoReady() {
+        alert("Video ready to play!");
+    }
+
+    window.onbeforeunload = function() {
+        return "Are you sure you want to leave?";
+    };
+
+    function findNearbyEvents() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(
+                (position) => {
+                    document.getElementById("location").innerText =
+                        `Latitude: ${position.coords.latitude}, Longitude: ${position.coords.longitude}`;
+                },
+                () => {
+                    document.getElementById("location").innerText = "Permission denied.";
+                },
+                { enableHighAccuracy: true }
+            );
+        } else {
+            alert("Geolocation not supported by your browser.");
+        }
+    }
+</script>
+
+</body>
+</html>
