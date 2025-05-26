@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Positioning Utilities Exercises</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 p-8">
+
+  <div class="min-h-screen flex flex-col">
+    <div class="flex-grow">
+      <h1 class="text-3xl font-bold mb-6">Fixed Footer</h1>
+      <p class="mb-32">Scroll down to see the footer stick to the bottom of the viewport.</p>
+    </div>
+
+    <footer class="fixed bottom-0 left-0 w-full bg-blue-600 text-white text-center p-4">
+      Fixed Footer - Always at the bottom!
+    </footer>
+  </div>
+
+  <div class="max-w-sm mx-auto mt-24">
+    <h1 class="text-3xl font-bold mb-6"> Badge Over Image</h1>
+
+    <div class="relative inline-block">
+      <img src="https://images.unsplash.com/photo-1593642532973-d31b6557fa68?auto=format&fit=crop&w=400&q=80" 
+     alt="Sample Image" class="rounded-lg">
+      <span class="absolute top-2 right-2 bg-red-600 text-white text-xs font-semibold px-2 py-1 rounded">NEW</span>
+    </div>
+
+  </div>
+
+</body>
+</html>

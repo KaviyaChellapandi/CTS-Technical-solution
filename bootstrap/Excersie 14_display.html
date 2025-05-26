@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Display and Visibility Exercises</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 p-8">
+
+  <div class="max-w-4xl mx-auto mb-12">
+    <h1 class="text-3xl font-bold mb-6">Show/Hide Sections</h1>
+
+    <div class="hidden md:block bg-blue-500 text-white p-4 rounded mb-4">
+      <p>This section is <strong>hidden on small screens</strong> and visible from <strong>md (768px)</strong> and up.</p>
+    </div>
+
+    <div class="hidden lg:flex bg-green-500 text-white p-4 rounded">
+      <p>This section is <strong>hidden on small and medium screens</strong>, and becomes <strong>flex on lg (1024px)</strong> and above.</p>
+    </div>
+  </div>
+  <div class="max-w-4xl mx-auto">
+    <h1 class="text-3xl font-bold mb-6"> Responsive Sidebar</h1>
+
+    <div class="flex">
+      <aside class="hidden md:block w-64 bg-gray-800 text-white p-4 rounded h-48">
+        <h2 class="text-xl font-semibold mb-3">Sidebar</h2>
+        <ul class="space-y-2">
+          <li><a href="#" class="hover:underline">Dashboard</a></li>
+          <li><a href="#" class="hover:underline">Settings</a></li>
+          <li><a href="#" class="hover:underline">Profile</a></li>
+        </ul>
+      </aside>
+
+      <main class="flex-1 p-4 bg-white rounded ml-4">
+        <p>This is the main content area. The sidebar only appears on tablets (768px) and larger screens.</p>
+      </main>
+    </div>
+
+  </div>
+
+</body>
+</html>
